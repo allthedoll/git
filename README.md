@@ -1,7 +1,7 @@
 # Git Tips & Tricks
 Cool stuff to do neat things with @allthedoll on March 21, 2019
 
-## Git colors
+## :zap: Git colors 
 `git config --global color.ui auto`
 This literally just ensures that git is colorized
 
@@ -20,7 +20,7 @@ This literally just ensures that git is colorized
   - Celebrate with `git log` that has color in it
 
 
-## Git log graph
+## :zap: Git log graph
 Creates a visual log
 
 ### About
@@ -41,16 +41,22 @@ Creates a visual log
 
 ### Try it out
 - ANSI basic colors
+
+
 `git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative`
 
 - ANSI 256 colors
+
+
 `git log --color --graph --pretty=format:'%C(92)%h%Creset -%C(255)%d%Creset %s %C(220)(%cr) %C(45)<%an>%Creset' --abbrev-commit --date=relative`
 
 - RGB as hexidecimal
+
+
 `git log --color --graph --pretty=format:'%C(#9873b5)%h%Creset -%C(#0077be)%d%Creset %s %C(#ec3b83)(%cr) %C(#20b2aa)<%an>%Creset' --abbrev-commit --date=relative`
 
 
-## Git log ...log (-L)
+## :zap: Git log ...log (-L)
 `git log -L <start>,<end>:FILE`
 Allows you to see all of the log entries that involve a diff of this file between the start and end lines
 
@@ -60,7 +66,7 @@ Allows you to see all of the log entries that involve a diff of this file betwee
 - Change the line numbers around
 - Try with other files in other repos
 
-## Git aliases
+## :zap: Git aliases
 Make custom shortcuts with `git config --global alias.nickname “command”`
 - You can combine actions in aliases with && 
 
@@ -68,7 +74,7 @@ Make custom shortcuts with `git config --global alias.nickname “command”`
 - `git config --global alias.logp "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"`
 
 
-## Git status
+## :zap: Git status
 Check your staging status
 
 ### Try it out
@@ -76,7 +82,7 @@ Check your staging status
   - `git status`
   - `git status -sb`
 
-## Search your command line history
+## :zap: Search your command line history
 Forgot what that one thing you did earlier was? Me too.
 
 ### About
@@ -88,7 +94,7 @@ Forgot what that one thing you did earlier was? Me too.
   - Did it find `git log -L 15,20:users.ldif.j2`? Why or why not?
 
 
-## Git grep
+## :zap: Git grep
 You can search git history with grep! 
 
 ### About
@@ -103,7 +109,7 @@ Change directory into `allthedoll/git`
 - Finds .j2 files containing the word "superman"
 
 
-## Git autocorrect
+## :zap: Git autocorrect
 Typo much? No problem.
 
 ### About
@@ -115,7 +121,7 @@ Git can save you from having to retype things you have mistyped!
 - Try `git sttaus`
 
 
-## Git patch
+## :zap: Git patch
 Allows you to stage portions of files, known as `hunks`
 - A hunk is each section of a diff that shows some context on where the differences happen
 
@@ -150,8 +156,8 @@ Allows you to stage portions of files, known as `hunks`
   - You can delete the lines you don’t want to include and then modify the number of lines on the “to-file-range”
   - Line numbers matter, and any additions or deletions warrant modifications
 
-## Git config notes
-### Git config levels
+## :zap: Git config notes
+### About
 - `--system`
   - System-wide configurations; they apply to all users on this computer
 - `--global`
@@ -159,7 +165,7 @@ Allows you to stage portions of files, known as `hunks`
 - `--local`
   - Repository-level configurations; they only apply to the specific repository where they are set
 
-## Stuff you should definitely have in your `.gitconfig`
+## :zap: Stuff you should definitely have in your `.gitconfig`
 `.gitconfig` is the file that Git uses to operate and configure variables
 
 ### About
