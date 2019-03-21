@@ -1,0 +1,2637 @@
+###########################################
+# LEGEND OF IDS:                          #
+#                                         #
+# - SUPERHEROES: 5000                     #
+#   - SUPERHEROES_USERS: 5100+            #
+# - DC-UNIVERSE: 6000                     #
+#   - DC-UNIVERSE_USERS: 6100+            #
+# - MARVEL-UNIVERSE: 7000                 #
+#   - MARVEL_UNIVERSE_USERS: 7100+        #
+# - GITHUB-ADMINS: 8000                   #
+# - MANAGERS: 8025                        #
+# - BIRDS-OF-PREY: 8050                   #
+# - JUSTIC-LEAGUE: 8075                   #
+# - TITANS: 9000                          #
+# - NEW-GODS: 9025                        #
+# - GREEN-LANTERN-CORPS: 9050             #
+# - ASGARDIANS: 9075                      #
+# - IRON-MAN-MOVIES: 10000                #
+# - BLACK-PANTHER-MOVIES: 10025           #
+# - CAPTAIN-AMERICA-MOVIES: 10050         #
+# - CAPTAIN-MARVEL-MOVIES: 10075          #
+# - DR-STRANGE-MOVIES: 10100              #
+# - GUARDIANS-OF-THE-GALAXY-MOVIES: 10125 #
+# - SME-WEAPONS: 10150                    #
+# - SME-COMPUTER-NERDS: 10175             #
+# - SME-RUBY: 10200                       #
+# - SME-PYTHON: 10225                     #
+# - SME-JENKINS: 10250                    #
+# - SME-GITHUB: 10275                     #
+# - SME-DOCUMENTATION: 10300              #
+# - SME-GIT: 10325                        #
+# - SME-MUSIC-LOVERS: 10350               #
+# - SME-HARDWARE-TEAM: 10400              #
+# - SME-RUNNING-TEAM: 10425               #
+# - SME-NODE: 10450                       #
+# - SME-MOBILE: 10475                     #
+# - ANT-MAN-MOVIES: 10500                 #
+# - AVENGERS-MOVIES: 10525                #
+#                                         #
+###########################################
+
+###############################
+# Create the Groups Attribute #
+###############################
+dn: ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: organizationalUnit
+ou: Groups
+
+################################
+# Create the group superheroes #
+################################
+dn: cn=superheroes,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: superheroes
+gidNumber: 5000
+memberUid: hubot
+memberuid: superman
+memberuid: nickfuryjr
+memberuid: batman
+memberuid: wonderwoman
+memberuid: greenlantern
+memberuid: theflash
+memberuid: aquaman
+memberuid: cyborg
+memberuid: alfredpennyworth
+memberuid: amethyst
+memberuid: arsenal
+memberuid: atom
+memberuid: batgirl
+memberuid: batwoman
+memberuid: beastboy
+memberuid: bigbarda
+memberuid: blackcanary
+memberuid: bluebeetle
+memberuid: boostergold
+memberuid: commissionerjamesgordon
+memberuid: deadman
+memberuid: firestorm
+memberuid: greenarrow
+memberuid: harveybullock
+memberuid: hawkgirl
+memberuid: hawkman
+memberuid: jimmyolsen
+memberuid: krypto
+memberuid: loislane
+memberuid: luciusfox
+memberuid: martianhunter
+memberuid: mera
+memberuid: midnighter
+memberuid: mistermiracle
+memberuid: misterterrific
+memberuid: nightwing
+memberuid: pandora
+memberuid: plasticman
+memberuid: quicksilver
+memberuid: raven
+memberuid: rickflag
+memberuid: riphunter
+memberuid: robin
+memberuid: shazam
+memberuid: starfire
+memberuid: stevetrevor
+memberuid: superboy
+memberuid: supergirl
+memberuid: swampthing
+memberuid: vixen
+memberuid: zatanna
+memberuid: ant-man
+memberuid: blackpanther
+memberuid: blackwidow
+memberuid: captainamerica
+memberuid: captainmarvel
+memberuid: doctorstrange
+memberuid: drax
+memberuid: gamora	
+memberuid: falcon
+memberuid: groot
+memberuid: hawkeye
+memberuid: heimdall
+memberuid: hulk
+memberuid: ironman
+memberuid: pepperpotts
+memberuid: mantis
+memberuid: mariahill
+memberuid: peggycarter
+memberuid: philcoulson
+memberuid: rocketraccoon
+memberuid: scarletwitch
+memberuid: sif
+memberuid: yondu	
+memberuid: shuri
+memberuid: spider-man
+memberuid: star-lord
+memberuid: thor
+memberuid: valkyrie
+memberuid: thevision
+memberuid: warmachine
+memberuid: wasp
+memberuid: wong
+memberUid: {{ hostvars['localhost'].local_user }}
+
+################################
+# Create the group dc-universe #
+################################
+dn: cn=dc-universe,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: dc-universe
+gidNumber: 6000
+memberuid: nickfuryjr
+memberuid: batman
+memberuid: wonderwoman
+memberuid: greenlantern
+memberuid: theflash
+memberuid: aquaman
+memberuid: cyborg
+memberuid: alfredpennyworth
+memberuid: amethyst
+memberuid: arsenal
+memberuid: atom
+memberuid: batgirl
+memberuid: batwoman
+memberuid: beastboy
+memberuid: bigbarda
+memberuid: blackcanary
+memberuid: bluebeetle
+memberuid: boostergold
+memberuid: commissionerjamesgordon
+memberuid: damianwayne
+memberuid: deadman
+memberuid: firestorm
+memberuid: greenarrow
+memberuid: harveybullock
+memberuid: hawkgirl
+memberuid: hawkman
+memberuid: jaygarrick
+memberuid: jimmyolsen
+memberuid: krypto
+memberuid: loislane
+memberuid: luciusfox
+memberuid: martianhunter
+memberuid: mera
+memberuid: midnighter
+memberuid: mistermiracle
+memberuid: misterterrific
+memberuid: nightwing
+memberuid: pandora
+memberuid: plasticman
+memberuid: raven
+memberuid: rickflag
+memberuid: riphunter
+memberuid: robin
+memberuid: shazam
+memberuid: starfire
+memberuid: stevetrevor
+memberuid: superboy
+memberuid: supergirl
+memberuid: swampthing
+memberuid: vixen
+memberuid: zatanna
+
+
+
+####################################
+# Create the group marvel-universe #
+####################################
+dn: cn=marvel-universe,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: marvel-universe
+gidNumber: 7000
+memberuid: ant-man
+memberuid: blackpanther
+memberuid: blackwidow
+memberuid: captainamerica
+memberuid: captainmarvel
+memberuid: doctorstrange
+memberuid: drax
+memberuid: falcon
+memberuid: gamora
+memberuid: groot
+memberuid: hawkeye
+memberuid: heimdall
+memberuid: howardstark
+memberuid: hulk
+memberuid: ironman
+memberuid: pepperpotts
+memberuid: mantis
+memberuid: mariahill
+memberuid: nickfuryjr
+memberuid: peggycarter
+memberuid: philcoulson
+memberuid: rocketraccoon
+memberuid: scarletwitch
+memberuid: sif
+memberuid: shuri
+memberuid: spider-man
+memberuid: star-lord
+memberuid: thor
+memberuid: valkyrie
+memberuid: thevision
+memberuid: warmachine
+memberuid: wasp
+memberuid: wong
+memberuid: yondu
+
+
+
+##################################
+# Create the group github-admins #
+##################################
+dn: cn=github-admins,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: github-admins
+gidNumber: 8000
+memberuid: ant-man
+memberuid: valkyrie
+memberuid: pepperpotts
+memberuid: alfredpennyworth
+
+
+
+##################################
+# Create the group managers #
+##################################
+dn: cn=managers,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: managers
+gidNumber: 8025
+memberuid: philcoulson
+memberuid: nickfuryjr
+memberuid: hankpym
+memberuid: alfredpennyworth
+memberuid: wonderwoman
+memberuid: greenlantern
+memberuid: cyborg
+memberuid: pepperpotts
+
+
+
+##################################
+# Create the group birds-of-prey #
+##################################
+dn: cn=birds-of-prey,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: managers
+gidNumber: 8050
+memberuid: batgirl
+memberuid: batman
+memberuid: blackcanary
+
+
+
+###################################
+# Create the group justice-league #
+###################################
+dn: cn=justice-league,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: justice-league
+gidNumber: 8075
+memberuid: nickfuryjr
+memberuid: batman
+memberuid: wonderwoman
+memberuid: theflash
+memberuid: greenlantern
+memberuid: aquaman
+memberuid: martianhunter
+
+
+
+###################################
+# Create the group titans         #
+###################################
+dn: cn=titans,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: titans
+gidNumber: 9000
+memberuid: robin
+memberuid: beastboy
+memberuid: cyborg
+memberuid: starfire
+memberuid: raven
+memberuid: superboy
+
+
+
+###################################
+# Create the group new-gods       #
+###################################
+dn: cn=new-gods,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: new-gods
+gidNumber: 9025
+memberuid: mistermiracle
+memberuid: bigbarda
+
+
+
+########################################
+# Create the group green-lantern-corps #
+########################################
+dn: cn=green-lantern-corps,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: green-lantern-corps
+gidNumber: 9050
+memberuid: greenlantern
+
+
+
+################################
+# Create the group asgardians  #
+################################
+dn: cn=asgardians,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: asgardians
+gidNumber: 9075
+memberuid: thor
+memberuid: heimdall
+memberuid: sif
+memberuid: valkyrie
+
+
+###########################################
+# Create the group black-panther-movies   #
+###########################################
+dn: cn=black-panther-movies,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: black-panther-movies
+gidNumber: 10025
+memberuid: blackpanther
+memberuid: shuri
+
+
+
+#############################################
+# Create the group captain-america-movies   #
+#############################################
+dn: cn=captain-america-movies,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: captain-america-movies
+gidNumber: 10050
+memberuid: ant-man
+memberuid: blackpanther
+memberuid: blackwidow
+memberuid: captainamerica
+memberuid: falcon
+memberuid: hawkeye
+memberuid: howardstark
+memberuid: ironman
+memberuid: mariahill
+memberuid: nickfuryjr
+memberuid: peggycarter
+memberuid: scarletwitch
+memberuid: spider-man
+memberuid: thevision
+memberuid: warmachine
+memberuid: quicksilver
+
+
+
+#############################################
+# Create the group captain-marvel-movies    #
+#############################################
+dn: cn=captain-marvel-movies,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: captain-marvel-movies
+gidNumber: 10075
+memberuid: captainmarvel
+memberuid: nickfuryjr
+memberuid: philcoulson
+
+
+
+#############################################
+# Create the group dr-strange-movies        #
+#############################################
+dn: cn=dr-strange-movies,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: dr-strange-movies
+gidNumber: 10100
+memberuid: doctorstrange
+memberuid: thor
+memberuid: wong
+
+
+
+###################################################
+# Create the group guardians-of-the-galaxy-movies #
+###################################################
+dn: cn=guardians-of-the-galaxy-movies,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: guardians-of-the-galaxy-movies
+gidNumber: 10125
+memberuid: drax
+memberuid: gamora
+memberuid: groot	
+memberuid: mantis
+memberuid: rocketraccoon
+memberuid: star-lord
+memberuid: yondu
+
+
+
+################################
+# Create the group sme-weapons #
+################################
+dn: cn=sme-weapons,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: sme-weapons
+gidNumber: 10150
+memberuid: rocketraccoon
+memberuid: shuri
+memberuid: ironman	
+memberuid: ironman
+memberuid: nickfury	
+memberuid: alfredpennyworth
+
+
+
+#######################################
+# Create the group sme-computer-nerds #
+#######################################
+dn: cn=sme-computer-nerds,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: sme-computer-nerds
+gidNumber: 10175
+memberuid: blackwidow
+memberuid: philcoulson
+memberuid: groot
+memberuid: star-lord
+memberuid: ant-man
+
+
+
+#############################
+# Create the group sme-ruby #
+#############################
+dn: cn=sme-ruby,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: sme-ruby
+gidNumber: 10200
+memberuid: mariahill
+memberuid: thevision
+memberuid: drax
+memberuid: gamora
+memberuid: peggycarter
+
+
+
+###############################
+# Create the group sme-python #
+###############################
+dn: cn=sme-python,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: sme-python
+gidNumber: 10225
+memberuid: blackwidow
+memberuid: doctorstrange
+memberuid: gamora	
+memberuid: gamora
+memberuid: groot
+memberuid: heimdall
+memberuid: hulk
+memberuid: mantis
+
+
+
+
+################################
+# Create the group sme-jenkins #
+################################
+dn: cn=sme-jenkins,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: sme-jenkins
+gidNumber: 10250
+memberuid: pepperpotts
+memberuid: philcoulson
+memberuid: nickfuryjr
+memberuid: mantis
+memberuid: star-lord
+memberuid: yondu
+
+
+
+################################
+# Create the group sme-github #
+################################
+dn: cn=sme-github,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: sme-github
+gidNumber: 10275
+memberuid: pepperpotts
+memberuid: thor
+memberuid: doctorstrange
+memberuid: mantis
+memberuid: drax	
+memberuid: drax
+memberuid: captainmarvel	
+memberuid: nickfuryjr
+memberuid: philcoulson
+memberuid: groot
+memberuid: ironman
+memberuid: alfredpennyworth
+memberuid: shuri 
+memberuid: blackwidow
+memberuid: blackpanther
+
+
+
+######################################
+# Create the group sme-documentation #
+######################################
+dn: cn=sme-documentation,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: sme-documentation
+gidNumber: 10300
+memberuid: pepperpotts
+memberuid: mantis
+memberuid: mariahill
+memberuid: thevision
+memberuid: doctorstrange
+memberuid: hulk 
+memberuid: alfredpennyworth
+
+
+
+############################
+# Create the group sme-git #
+############################
+dn: cn=sme-git,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: sme-git
+gidNumber: 10325
+memberuid: pepperpotts
+memberuid: blackwidow
+memberuid: mantis
+memberuid: yondu
+memberuid: philcoulson
+
+
+
+#####################################
+# Create the group sme-music-lovers #
+#####################################
+dn: cn=sme-music-lovers,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: sme-music-lovers
+gidNumber: 10350
+memberuid: star-lord
+memberuid: groot
+memberuid: gamora
+memberuid: drax
+memberuid: mantis
+memberuid: rocketraccoon
+memberuid: shuri
+memberuid: ironman
+
+
+
+######################################
+# Create the group sme-hardware-team #
+######################################
+dn: cn=sme-hardware-team,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: sme-hardware-team
+gidNumber: 10400
+memberuid: blackwidow
+memberuid: pepperpotts
+memberuid: ironman 
+memberuid: shuri
+memberuid: wonderwoman
+memberuid: captainamerica	
+
+
+
+######################################
+# Create the group sme-running-team  #
+######################################
+dn: cn=sme-running-team,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: sme-running-team
+gidNumber: 10425
+memberuid: batwoman
+memberuid: flash	
+memberuid: alfredpennyworth
+memberuid: hubot	
+memberuid: hulk	
+memberuid: quicksilver
+
+
+
+##############################
+# Create the group sme-node  #
+##############################
+dn: cn=sme-node,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: sme-running-team
+gidNumber: 10450
+memberuid: drax
+memberuid: gamora
+memberuid: wong
+memberuid: spiderman
+memberuid: falcon
+memberuid: scarletwitch
+memberuid: commissionerjamesgordon
+
+
+
+##############################
+# Create the group sme-mobile  #
+##############################
+dn: cn=sme-mobile,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: sme-mobile
+gidNumber: 10475
+memberuid: theflash
+memberuid: star-lord
+memberuid: mantis 
+memberuid: heimdall 
+memberuid: scarletwitch
+memberuid: wong
+
+
+
+####################################
+# Create the group iron-man-movies #
+####################################
+dn: cn=iron-man-movies,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: iron-man-movies
+gidNumber: 10000
+memberuid: ironman
+memberuid: pepperpotts
+memberuid: blackwidow
+memberuid: howardstark
+memberuid: hulk
+memberuid: nickfuryjr
+memberuid: philcoulson
+memberuid: warmachine
+
+
+
+###################################
+# Create the group ant-man-movies #
+###################################
+dn: cn=ant-man-movies,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: ant-man-movies
+gidNumber: 10500
+memberuid: ant-man
+memberuid: hankpym
+memberuid: hopepym
+memberuid: wasp
+memberuid: falcon
+memberuid: captainamerica
+memberuid: howardstark
+memberuid: peggycarter
+
+
+
+####################################
+# Create the group avengers-movies #
+####################################
+dn: cn=avengers-movies,ou=Groups,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixGroup
+cn: avengers-movies
+gidNumber: 10525
+memberuid: blackpanther
+memberuid: blackwidow
+memberuid: captainamerica
+memberuid: doctorstrange
+memberuid: drax
+memberuid: falcon
+memberuid: gamora
+memberuid: groot
+memberuid: hawkeye
+memberuid: heimdall
+memberuid: hulk
+memberuid: ironman
+memberuid: mantis
+memberuid: mariahill
+memberuid: nickfuryjr
+memberuid: peggycarter
+memberuid: rocketraccoon
+memberuid: scarletwitch
+memberuid: shuri
+memberuid: spider-man
+memberuid: star-lord
+memberuid: thor
+memberuid: thevision
+memberuid: warmachine
+memberuid: wong
+
+
+
+###############################
+# Create the People Attribute #
+###############################
+dn: ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+
+#######################
+#######################
+## Create Hubot User ##
+#######################
+#######################
+
+#########
+# Hubot #
+#########
+dn: uid=hubot,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: hubot
+sn: hubot
+givenName: hubot
+cn: hubot
+displayName: hubot
+uidNumber: 7100
+gidNumber: 7000
+userPassword: {{ openldap_user_password }}
+gecos: hubot
+loginShell: /bin/bash
+homeDirectory: /home/hubot
+
+
+#######################
+#######################
+## Create Local User ##
+#######################
+#######################
+
+##############
+# Local User #
+##############
+dn: uid={{ hostvars['localhost'].local_user }},ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: {{ hostvars['localhost'].local_user }}
+sn: {{ hostvars['localhost'].local_user }}
+givenName: {{ hostvars['localhost'].local_user }}
+cn: {{ hostvars['localhost'].local_user }}
+displayName: {{ hostvars['localhost'].local_user }}
+uidNumber: 7102
+gidNumber: 7000
+userPassword: {{ openldap_user_password }}
+gecos: {{ hostvars['localhost'].local_user }}
+loginShell: /bin/bash
+homeDirectory: /home/{{ hostvars['localhost'].local_user }}
+
+##############################
+##############################
+## Create SUPERHEROES Users ##
+##############################
+##############################
+
+#############
+# superman  #
+#############
+
+dn: uid=superman,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: superman
+sn: Kent
+givenName: Clark
+cn: Clark Kent
+mail:superman@{{ openldap_domain_name }}
+displayName: Clark Kent
+uidNumber: 5101
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Clark Kent
+loginShell: /bin/bash
+homeDirectory: /home/superman
+
+###############
+# nickfuryjr  #
+###############
+
+dn: uid=nickfuryjr,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: nickfuryjr
+sn: Fury
+givenName: Nick
+cn: Nick Fury
+mail:nickfuryjr@{{ openldap_domain_name }}
+displayName: Nick Fury
+uidNumber: 5102
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Nick Fury
+loginShell: /bin/bash
+homeDirectory: /home/nickfuryjr
+
+#############
+# batman    #
+#############
+
+dn: uid=batman,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: batman
+sn: Wayne
+givenName: Banner
+cn: Banner Wayne
+mail:batman@{{ openldap_domain_name }}
+displayName: Banner Wayne
+uidNumber: 5103
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Banner Wayne
+loginShell: /bin/bash
+homeDirectory: /home/batman
+
+################
+# wonderwoman  #
+################
+
+dn: uid=wonderwoman,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: wonderwoman
+sn: Prince
+givenName: Diana
+cn: Diana Prince
+mail:wonderwoman@{{ openldap_domain_name }}
+displayName: Diana Prince
+uidNumber: 5104
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Diana Prince
+loginShell: /bin/bash
+homeDirectory: /home/wonderwoman
+
+#################
+# greenlantern  #
+#################
+
+dn: uid=greenlantern,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: greenlantern
+sn: Jordan
+givenName: Hal
+cn: Hal Jordan
+mail:greenlantern@{{ openldap_domain_name }}
+displayName: Hal Jordan
+uidNumber: 5105
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Hal Jordan
+loginShell: /bin/bash
+homeDirectory: /home/greenlantern
+
+#############
+# theflash  #
+#############
+
+dn: uid=theflash,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: theflash
+sn: Allen
+givenName: Barry
+cn: Barry Allen
+mail:theflash@{{ openldap_domain_name }}
+displayName: Barry Allen
+uidNumber: 5106
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Barry Allen
+loginShell: /bin/bash
+homeDirectory: /home/theflash
+
+#############
+# aquaman   #
+#############
+
+dn: uid=aquaman,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: aquaman
+sn: Curry
+givenName: Arthur
+cn: Arthur Curry
+mail:aquaman@{{ openldap_domain_name }}
+displayName: Arthur Curry
+uidNumber: 5107
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Arthur Curry
+loginShell: /bin/bash
+homeDirectory: /home/aquaman
+
+#############
+# cyborg    #
+#############
+
+dn: uid=cyborg,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: cyborg
+sn: Stone
+givenName: Victor
+cn: Victor Stone
+mail:cyborg@{{ openldap_domain_name }}
+displayName: Victor Stone
+uidNumber: 5108
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Victor Stone
+loginShell: /bin/bash
+homeDirectory: /home/cyborg
+
+#####################
+# alfredpennyworth  #
+#####################
+
+dn: uid=alfredpennyworth,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: alfredpennyworth
+sn: Pennyworth
+givenName: Alfred
+cn: Alfred Pennyworth
+mail:alfredpennyworth@{{ openldap_domain_name }}
+displayName: Alfred Pennyworth
+uidNumber: 5109
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Alfred Pennyworth
+loginShell: /bin/bash
+homeDirectory: /home/alfredpennyworth
+
+#############
+# amethyst  #
+#############
+
+dn: uid=amethyst,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: amethyst
+sn: Winston
+givenName: Amy
+cn: Amy Winston
+mail:amethyst@{{ openldap_domain_name }}
+displayName: Amy Winston
+uidNumber: 5110
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Amy Winston
+loginShell: /bin/bash
+homeDirectory: /home/amethyst
+
+#############
+# arsenal   #
+#############
+
+dn: uid=arsenal,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: arsenal
+sn: Harper
+givenName: Roy
+cn: Roy Harper
+mail:arsenal@{{ openldap_domain_name }}
+displayName: Roy Harper
+uidNumber: 5111
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Roy Harper
+loginShell: /bin/bash
+homeDirectory: /home/arsenal
+
+#############
+# atom      #
+#############
+
+dn: uid=atom,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: atom
+sn: Palmer
+givenName: Roy
+cn: Roy Palmer
+mail:atom@{{ openldap_domain_name }}
+displayName: Roy Palmer
+uidNumber: 5112
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Roy Palmer
+loginShell: /bin/bash
+homeDirectory: /home/atom
+
+#############
+# batgirl   #
+#############
+
+dn: uid=batgirl,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: batgirl
+sn: Gordon
+givenName: Barbara
+cn: Barbara Gordon
+mail:batgirl@{{ openldap_domain_name }}
+displayName: Barbara Gordon
+uidNumber: 5113
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Barbara Gordon
+loginShell: /bin/bash
+homeDirectory: /home/batgirl
+
+#############
+# batwoman  #
+#############
+
+dn: uid=batwoman,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: batwoman
+sn: Kane
+givenName: Kate
+cn: Kate Kane
+mail:batwoman@{{ openldap_domain_name }}
+displayName: Kate Kane
+uidNumber: 5114
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Kate Kane
+loginShell: /bin/bash
+homeDirectory: /home/batwoman
+
+#############
+# beastboy  #
+#############
+
+dn: uid=beastboy,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: beastboy
+sn: Logan
+givenName: Garfield
+cn: Garfield Logan
+mail:beastboy@{{ openldap_domain_name }}
+displayName: Garfield Logan
+uidNumber: 5115
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Garfield Logan
+loginShell: /bin/bash
+homeDirectory: /home/beastboy
+
+#############
+# bigbarda  #
+#############
+
+dn: uid=bigbarda,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: bigbarda
+sn: Free
+givenName: Barda
+cn: Barda Free
+mail:bigbarda@{{ openldap_domain_name }}
+displayName: Barda Free
+uidNumber: 5116
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Barda Free
+loginShell: /bin/bash
+homeDirectory: /home/bigbarda
+
+################
+# blackcanary  #
+################
+
+dn: uid=blackcanary,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: blackcanary
+sn: Drake-Lance
+givenName: Dinah
+cn: Dinah Drake-Lance
+mail:blackcanary@{{ openldap_domain_name }}
+displayName: Dinah Drake-Lance
+uidNumber: 5117
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Dinah Drake-Lance
+loginShell: /bin/bash
+homeDirectory: /home/blackcanary
+
+###############
+# bluebeetle  #
+###############
+
+dn: uid=bluebeetle,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: bluebeetle
+sn: Garrett
+givenName: Dan
+cn: Dan Garrett
+mail:bluebeetle@{{ openldap_domain_name }}
+displayName: Dan Garrett
+uidNumber: 5118
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Dan Garrett
+loginShell: /bin/bash
+homeDirectory: /home/bluebeetle
+
+################
+# boostergold  #
+################
+
+dn: uid=boostergold,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: boostergold
+sn: Carter
+givenName: Michael Jon
+cn: Michael Jon Carter
+mail:boostergold@{{ openldap_domain_name }}
+displayName: Michael Jon Carter
+uidNumber: 5119
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Michael Jon Carter
+loginShell: /bin/bash
+homeDirectory: /home/boostergold
+
+############################
+# commissionerjamesgordon  #
+############################
+
+dn: uid=commissionerjamesgordon,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: commissionerjamesgordon
+sn: Gordon
+givenName: James
+cn: James Gordon
+mail:commissionerjamesgordon@{{ openldap_domain_name }}
+displayName: James Gordon
+uidNumber: 5120
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: James Gordon
+loginShell: /bin/bash
+homeDirectory: /home/commissionerjamesgordon
+
+#############
+# deadman   #
+#############
+
+dn: uid=deadman,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: deadman
+sn: Brand
+givenName: Boston
+cn: Boston Brand
+mail:deadman@{{ openldap_domain_name }}
+displayName: Boston Brand
+uidNumber: 5121
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Boston Brand
+loginShell: /bin/bash
+homeDirectory: /home/deadman
+
+##############
+# firestorm  #
+##############
+
+dn: uid=firestorm,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: firestorm
+sn: Raymond
+givenName: Robbie
+cn: Robbie Raymond
+mail:firestorm@{{ openldap_domain_name }}
+displayName: Robbie Raymond
+uidNumber: 5122
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Robbie Raymond
+loginShell: /bin/bash
+homeDirectory: /home/firestorm
+
+##############
+# greenarrow #
+##############
+
+dn: uid=greenarrow,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: harveybullock
+sn: Queen
+givenName: Oliver
+cn: Oliver Queen
+mail:greenarrow@{{ openldap_domain_name }}
+displayName: Oliver Queen
+uidNumber: 5123
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Oliver Queen
+loginShell: /bin/bash
+homeDirectory: /home/greenarrow
+
+##################
+# harveybullock  #
+##################
+
+dn: uid=harveybullock,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: harveybullock
+sn: Bullock
+givenName: Harvey
+cn: Harvey Bullock
+mail:harveybullock@{{ openldap_domain_name }}
+displayName: Harvey Bullock
+uidNumber: 5124
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Harvey Bullock
+loginShell: /bin/bash
+homeDirectory: /home/harveybullock
+
+#############
+# hawkgirl  #
+#############
+
+dn: uid=hawkgirl,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: hawkgirl
+sn: Sanders Hall
+givenName: Shiera
+cn: Shiera Sanders Hall
+mail:hawkgirl@{{ openldap_domain_name }}
+displayName: Shiera Sanders Hall
+uidNumber: 5125
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Shiera Sanders Hall
+loginShell: /bin/bash
+homeDirectory: /home/hawkgirl
+
+#############
+# hawkman   #
+#############
+
+dn: uid=hawkman,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: hawkman
+sn: Hall
+givenName: Carter
+cn: Carter Hall
+mail:hawkman@{{ openldap_domain_name }}
+displayName: Carter Hall
+uidNumber: 5126
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Carter Hall
+loginShell: /bin/bash
+homeDirectory: /home/hawkman
+
+###############
+# jimmyolsen  #
+###############
+
+dn: uid=jimmyolsen,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: jimmyolsen
+sn: Olsen
+givenName: Jimmy
+cn: Jimmy Olsen
+mail:jimmyolsen@{{ openldap_domain_name }}
+displayName: Jimmy Olsen
+uidNumber: 5127
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Jimmy Olsen
+loginShell: /bin/bash
+homeDirectory: /home/jimmyolsen
+
+#############
+# krypto    #
+#############
+
+dn: uid=krypto,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: krypto
+sn: Lane
+givenName: Superdog
+cn: Superdog Lane
+mail:krypto@{{ openldap_domain_name }}
+displayName: Superdog Lane
+uidNumber: 5128
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Superdog Lane
+loginShell: /bin/bash
+homeDirectory: /home/krypto
+
+#############
+# loislane  #
+#############
+
+dn: uid=loislane,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: loislane
+sn: Lane
+givenName: Lois
+cn: Lois Lane
+mail:loislane@{{ openldap_domain_name }}
+displayName: Lois Lane
+uidNumber: 5129
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Lois Lane
+loginShell: /bin/bash
+homeDirectory: /home/loislane
+
+##############
+# luciusfox  #
+##############
+
+dn: uid=luciusfox,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: luciusfox
+sn: Fox
+givenName: Lucius
+cn: Lucius Fox
+mail:luciusfox@{{ openldap_domain_name }}
+displayName: Lucius Fox
+uidNumber: 5130
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Lucius Fox
+loginShell: /bin/bash
+homeDirectory: /home/luciusfox
+
+##################
+# martianhunter  #
+##################
+
+dn: uid=martianhunter,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: martianhunter
+sn: Jonzz
+givenName: Jonn
+cn: Jonn Jonzz
+mail:martianhunter@{{ openldap_domain_name }}
+displayName: Jonn Jonzz
+uidNumber: 5131
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Jonn Jonzz
+loginShell: /bin/bash
+homeDirectory: /home/martianhunter
+
+#############
+# mera      #
+#############
+
+dn: uid=mera,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: mera
+sn: Curry
+givenName: Mera
+cn: Mera Curry
+mail:mera@{{ openldap_domain_name }}
+displayName: Mera Curry
+uidNumber: 5132
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Mera Curry
+loginShell: /bin/bash
+homeDirectory: /home/mera
+
+###############
+# midnighter  #
+###############
+
+dn: uid=midnighter,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: midnighter
+sn: Trent
+givenName: Lucas
+cn: Lucas Trent
+mail:midnighter@{{ openldap_domain_name }}
+displayName: Lucas Trent
+uidNumber: 5133
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Lucas Trent
+loginShell: /bin/bash
+homeDirectory: /home/midnighter
+
+##################
+# mistermiracle  #
+##################
+
+dn: uid=mistermiracle,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: mistermiracle
+sn: Free
+givenName: Scott
+cn: Scott Free
+mail:mistermiracle@{{ openldap_domain_name }}
+displayName: Scott Free
+uidNumber: 5134
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Scott Free
+loginShell: /bin/bash
+homeDirectory: /home/mistermiracle
+
+###################
+# misterterrific  #
+###################
+
+dn: uid=misterterrific,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: misterterrific
+sn: Holt
+givenName: Michael
+cn: Michael Holt
+mail:misterterrific@{{ openldap_domain_name }}
+displayName: Michael Holt
+uidNumber: 5135
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Michael Holt
+loginShell: /bin/bash
+homeDirectory: /home/misterterrific
+
+##############
+# nightwing  #
+##############
+
+dn: uid=nightwing,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: nightwing
+sn: Grayson
+givenName: Dick
+cn: Dick Grayson
+mail:nightwing@{{ openldap_domain_name }}
+displayName: Dick Grayson
+uidNumber: 5136
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Dick Grayson
+loginShell: /bin/bash
+homeDirectory: /home/nightwing
+
+#############
+# pandora   #
+#############
+
+dn: uid=pandora,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: pandora
+sn: Stranger
+givenName: Pandora
+cn: Pandora Stranger
+mail:pandora@{{ openldap_domain_name }}
+displayName: Pandora Stranger
+uidNumber: 5137
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Pandora Stranger
+loginShell: /bin/bash
+homeDirectory: /home/pandora
+
+###############
+# plasticman  #
+###############
+
+dn: uid=plasticman,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: plasticman
+sn: O'Brian
+givenName: Patrick
+cn: Patrick O'Brian
+mail:plasticman@{{ openldap_domain_name }}
+displayName: Patrick O'Brian
+uidNumber: 5138
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Patrick O'Brian
+loginShell: /bin/bash
+homeDirectory: /home/plasticman
+
+###############
+# quicksilver #
+###############
+
+dn: uid=quicksilver,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: quicksilver
+sn: Maximoff
+givenName: Pietro
+cn: Pietro Maximoff
+mail:quicksilver@{{ openldap_domain_name }}
+displayName: Pietro Maximoff
+uidNumber: 5182
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Pietro Maximoff
+loginShell: /bin/bash
+homeDirectory: /home/quicksilver
+
+
+#############
+# raven     #
+#############
+
+dn: uid=raven,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: raven
+sn: Roth
+givenName: Rachel
+cn: Rachel Roth
+mail:raven@{{ openldap_domain_name }}
+displayName: Rachel Roth
+uidNumber: 5139
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Rachel Roth
+loginShell: /bin/bash
+homeDirectory: /home/raven
+
+#############
+# rickflag  #
+#############
+
+dn: uid=rickflag,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: rickflag
+sn: Flag
+givenName: Richard
+cn: Richard Flag
+mail:rickflag@{{ openldap_domain_name }}
+displayName: Richard Flag
+uidNumber: 5140
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Richard Flag
+loginShell: /bin/bash
+homeDirectory: /home/rickflag
+
+##############
+# riphunter  #
+##############
+
+dn: uid=riphunter,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: riphunter
+sn: Hunter
+givenName: Richard
+cn: Richard Hunter
+mail:riphunter@{{ openldap_domain_name }}
+displayName: Richard Hunter
+uidNumber: 5141
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Richard Hunter
+loginShell: /bin/bash
+homeDirectory: /home/riphunter
+
+#############
+# robin     #
+#############
+
+dn: uid=robin,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: robin
+sn: Todd
+givenName: Jason Peter
+cn: Jason Peter Todd
+mail:robin@{{ openldap_domain_name }}
+displayName: Jason Peter Todd
+uidNumber: 5142
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Jason Peter Todd
+loginShell: /bin/bash
+homeDirectory: /home/robin
+
+#############
+# shazam    #
+#############
+
+dn: uid=shazam,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: shazam
+sn: Canaan
+givenName: Jebidiah
+cn: Jebidiah Canaan
+mail:shazam@{{ openldap_domain_name }}
+displayName: Jebidiah Canaan
+uidNumber: 5143
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Jebidiah Canaan
+loginShell: /bin/bash
+homeDirectory: /home/shazam
+
+#############
+# starfire  #
+#############
+
+dn: uid=starfire,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: starfire
+sn: Starfire
+givenName: Koriand'r
+cn: Koriand'r Starfire
+mail:starfire@{{ openldap_domain_name }}
+displayName: Koriand'r Starfire
+uidNumber: 5144
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Koriand'r Starfire
+loginShell: /bin/bash
+homeDirectory: /home/starfire
+
+################
+# stevetrevor  #
+################
+
+dn: uid=stevetrevor,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: stevetrevor
+sn: Rockwell Trevor
+givenName: Steven
+cn: Steven Rockwell Trevor
+mail:stevetrevor@{{ openldap_domain_name }}
+displayName: Steven Rockwell Trevor
+uidNumber: 5145
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Steven Rockwell Trevor
+loginShell: /bin/bash
+homeDirectory: /home/stevetrevor
+
+#############
+# superboy  #
+#############
+
+dn: uid=superboy,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: superboy
+sn: Zor'El
+givenName: Connor
+cn: Connor Zor'El
+mail:superboy@{{ openldap_domain_name }}
+displayName: Connor Zor'El
+uidNumber: 5146
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Connor Zor'El
+loginShell: /bin/bash
+homeDirectory: /home/superboy
+
+##############
+# supergirl  #
+##############
+
+dn: uid=supergirl,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: supergirl
+sn: Zor'El
+givenName: Kara
+cn: Kara Zor'El
+mail:supergirl@{{ openldap_domain_name }}
+displayName: Kara Zor'El
+uidNumber: 5147
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Kara Zor'El
+loginShell: /bin/bash
+homeDirectory: /home/supergirl
+
+###############
+# swampthing  #
+###############
+
+dn: uid=swampthing,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: swampthing
+sn: Thing
+givenName: Swamp
+cn: Swamp Thing
+mail:swampthing@{{ openldap_domain_name }}
+displayName: Swamp Thing
+uidNumber: 5148
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Swamp Thing
+loginShell: /bin/bash
+homeDirectory: /home/swampthing
+
+#############
+# vixen     #
+#############
+
+dn: uid=vixen,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: vixen
+sn: Jiwe
+givenName: Amaya
+cn: Amaya Jiwe
+mail:vixen@{{ openldap_domain_name }}
+displayName: Amaya Jiwe
+uidNumber: 5149
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Amaya Jiwe
+loginShell: /bin/bash
+homeDirectory: /home/vixen
+
+#############
+# zatanna   #
+#############
+
+dn: uid=zatanna,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: zatanna
+sn: Zatara
+givenName: Zatanna
+cn: Zatanna Zatara
+mail:zatanna@{{ openldap_domain_name }}
+displayName: Zatanna Zatara
+uidNumber: 5150
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Zatanna Zatara
+loginShell: /bin/bash
+homeDirectory: /home/zatanna
+
+#############
+# ant-man   #
+#############
+
+dn: uid=ant-man,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: ant-man
+sn: Lang
+givenName: Scott
+cn: Scott Lang
+mail:ant-man@{{ openldap_domain_name }}
+displayName: Scott Lang
+uidNumber: 5151
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Scott Lang
+loginShell: /bin/bash
+homeDirectory: /home/ant-man
+
+#################
+# blackpanther  #
+#################
+
+dn: uid=blackpanther,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: blackpanther
+sn: of Wakanda
+givenName: T'Challa
+cn: T'Challa of Wakanda
+mail:blackpanther@{{ openldap_domain_name }}
+displayName: T'Challa of Wakanda
+uidNumber: 5152
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: T'Challa of Wakanda
+loginShell: /bin/bash
+homeDirectory: /home/blackpanther
+
+###############
+# blackwidow  #
+###############
+
+dn: uid=blackwidow,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: blackwidow
+sn: Romanova
+givenName: Natasha
+cn: Natasha Romanova
+mail:blackwidow@{{ openldap_domain_name }}
+displayName: Natasha Romanova
+uidNumber: 5153
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Natasha Romanova
+loginShell: /bin/bash
+homeDirectory: /home/blackwidow
+
+###################
+# captainamerica  #
+###################
+
+dn: uid=captainamerica,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: captainamerica
+sn: Rogers
+givenName: Steven
+cn: Steven Rogers
+mail:captainamerica@{{ openldap_domain_name }}
+displayName: Steven Rogers
+uidNumber: 5154
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Steven Rogers
+loginShell: /bin/bash
+homeDirectory: /home/captainamerica
+
+##################
+# captainmarvel  #
+##################
+
+dn: uid=captainmarvel,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: captainmarvel
+sn: Danvers
+givenName: Carol
+cn: Carol Danvers
+mail:captainmarvel@{{ openldap_domain_name }}
+displayName: Carol Danvers
+uidNumber: 5155
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Carol Danvers
+loginShell: /bin/bash
+homeDirectory: /home/captainmarvel
+
+##################
+# doctorstrange  #
+##################
+
+dn: uid=doctorstrange,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: doctorstrange
+sn: Strange
+givenName: Stephen
+cn: Stephen Strange
+mail:doctorstrange@{{ openldap_domain_name }}
+displayName: Stephen Strange
+uidNumber: 5156
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Stephen Strange
+loginShell: /bin/bash
+homeDirectory: /home/doctorstrange
+
+#############
+# drax      #
+#############
+
+dn: uid=drax,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: drax
+sn: Douglas
+givenName: Arthur
+cn: Arthur Douglas
+mail:drax@{{ openldap_domain_name }}
+displayName: Arthur Douglas
+uidNumber: 5157
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Arthur Douglas
+loginShell: /bin/bash
+homeDirectory: /home/drax
+
+#############
+# gamora    #
+#############
+
+dn: uid=gamora,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: gamora
+sn: Zen Whoberi Ben Titan
+givenName: Gamora
+cn: Gamora Zen Whoberi Ben Titan
+mail:gamora@{{ openldap_domain_name }}
+displayName: Gamora Zen Whoberi Ben Titan
+uidNumber: 5158
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Gamora Zen Whoberi Ben Titan
+loginShell: /bin/bash
+homeDirectory: /home/gamora
+
+#############
+# falcon    #
+#############
+
+dn: uid=falcon,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: falcon
+sn: Wilson
+givenName: Samuel
+cn: Samuel Wilson
+mail:falcon@{{ openldap_domain_name }}
+displayName: Samuel Wilson
+uidNumber: 5159
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Samuel Wilson
+loginShell: /bin/bash
+homeDirectory: /home/falcon
+
+#############
+# hawkeye   #
+#############
+
+dn: uid=hawkeye,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: hawkeye
+sn: Barton
+givenName: Clint
+cn: Clint Barton
+mail:hawkeye@{{ openldap_domain_name }}
+displayName: Clint Barton
+uidNumber: 5160
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Clint Barton
+loginShell: /bin/bash
+homeDirectory: /home/hawkeye
+
+#############
+# heimdall  #
+#############
+
+dn: uid=heimdall,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: heimdall
+sn: Asgardian
+givenName: Heimdall
+cn: Heimdall Asgardian
+mail:heimdall@{{ openldap_domain_name }}
+displayName: Heimdall Asgardian
+uidNumber: 5161
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Heimdall Asgardian
+loginShell: /bin/bash
+homeDirectory: /home/heimdall
+
+#############
+# hulk      #
+#############
+
+dn: uid=hulk,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: hulk
+sn: Banner
+givenName: Bruce
+cn: Bruce Banner
+mail:hulk@{{ openldap_domain_name }}
+displayName: Bruce Banner
+uidNumber: 5162
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Bruce Banner
+loginShell: /bin/bash
+homeDirectory: /home/hulk
+
+#############
+# ironman  #
+#############
+
+dn: uid=ironman,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: ironman
+sn: Stark
+givenName: Howard
+cn: Howard Stark
+mail:ironman@{{ openldap_domain_name }}
+displayName: Howard Stark
+uidNumber: 5163
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Howard Stark
+loginShell: /bin/bash
+homeDirectory: /home/ironman
+
+################
+# pepperpotts  #
+################
+
+dn: uid=pepperpotts,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: pepperpotts
+sn: Potts
+givenName: Pepper
+cn: Pepper Potts
+mail:pepperpotts@{{ openldap_domain_name }}
+displayName: Pepper Potts
+uidNumber: 5164
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Pepper Potts
+loginShell: /bin/bash
+homeDirectory: /home/pepperpotts
+
+#############
+# mantis    #
+#############
+
+dn: uid=mantis,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: mantis
+sn: Brandt
+givenName: Mantis
+cn: Mantis Brandt
+mail:mantis@{{ openldap_domain_name }}
+displayName: Mantis Brandt
+uidNumber: 5165
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Mantis Brandt
+loginShell: /bin/bash
+homeDirectory: /home/mantis
+
+##############
+# mariahill  #
+##############
+
+dn: uid=mariahill,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: mariahill
+sn: Hill
+givenName: Maria
+cn: Maria Hill
+mail:mariahill@{{ openldap_domain_name }}
+displayName: Maria Hill
+uidNumber: 5166
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Maria Hill
+loginShell: /bin/bash
+homeDirectory: /home/mariahill
+
+################
+# peggycarter  #
+################
+
+dn: uid=peggycarter,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: peggycarter
+sn: Carter
+givenName: Sharon
+cn: Sharon Carter
+mail:peggycarter@{{ openldap_domain_name }}
+displayName: Sharon Carter
+uidNumber: 5167
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Sharon Carter
+loginShell: /bin/bash
+homeDirectory: /home/peggycarter
+
+################
+# philcoulson  #
+################
+
+dn: uid=philcoulson,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: philcoulson
+sn: Coulson
+givenName: Phil
+cn: Phil Coulson
+mail:philcoulson@{{ openldap_domain_name }}
+displayName: Phil Coulson
+uidNumber: 5168
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Phil Coulson
+loginShell: /bin/bash
+homeDirectory: /home/philcoulson
+
+##################
+# rocketraccoon  #
+##################
+
+dn: uid=rocketraccoon,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: rocketraccoon
+sn: Raccoon
+givenName: Rocket
+cn: Rocket Raccoon
+mail:rocketraccoon@{{ openldap_domain_name }}
+displayName: Rocket Raccoon
+uidNumber: 5169
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Rocket Raccoon
+loginShell: /bin/bash
+homeDirectory: /home/rocketraccoon
+
+#################
+# scarletwitch  #
+#################
+
+dn: uid=scarletwitch,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: scarletwitch
+sn: Maximoff
+givenName: Wanda
+cn: Wanda Maximoff
+mail:scarletwitch@{{ openldap_domain_name }}
+displayName: Wanda Maximoff
+uidNumber: 5170
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Wanda Maximoff
+loginShell: /bin/bash
+homeDirectory: /home/scarletwitch
+
+#############
+# sif       #
+#############
+
+dn: uid=sif,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: sif
+sn: Asgardian
+givenName: Sif
+cn: Sif Asgardian
+mail:sif@{{ openldap_domain_name }}
+displayName: Sif Asgardian
+uidNumber: 5171
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Sif Asgardian
+loginShell: /bin/bash
+homeDirectory: /home/sif
+
+#############
+# yondu     #
+#############
+
+dn: uid=yondu,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: yondu
+sn: Udonta
+givenName: Yondu
+cn: Yondu Udonta
+mail:yondu@{{ openldap_domain_name }}
+displayName: Yondu Udonta
+uidNumber: 5172
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Yondu Udonta
+loginShell: /bin/bash
+homeDirectory: /home/yondu
+
+#############
+# shuri     #
+#############
+
+dn: uid=shuri,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: shuri
+sn: of Wakanda
+givenName: Shuri
+cn: Shuri of Wakanda
+mail:shuri@{{ openldap_domain_name }}
+displayName: Shuri of Wakanda
+uidNumber: 5173
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Shuri of Wakanda
+loginShell: /bin/bash
+homeDirectory: /home/shuri
+
+###############
+# spider-man  #
+###############
+
+dn: uid=spider-man,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: spider-man
+sn: Parker
+givenName: Peter
+cn: Peter Parker
+mail:spider-man@{{ openldap_domain_name }}
+displayName: Peter Parker
+uidNumber: 5174
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Peter Parker
+loginShell: /bin/bash
+homeDirectory: /home/spider-man
+
+##############
+# star-lord  #
+##############
+
+dn: uid=star-lord,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: star-lord
+sn: Quill
+givenName: Peter
+cn: Peter Quill
+mail:star-lord@{{ openldap_domain_name }}
+displayName: Peter Quill
+uidNumber: 5175
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Peter Quill
+loginShell: /bin/bash
+homeDirectory: /home/star-lord
+
+#############
+# thor      #
+#############
+
+dn: uid=thor,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: thor
+sn: Asgardian
+givenName: Thor
+cn: Thor Asgardian
+mail:thor@{{ openldap_domain_name }}
+displayName: Thor Asgardian
+uidNumber: 5176
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Thor Asgardian
+loginShell: /bin/bash
+homeDirectory: /home/thor
+
+#############
+# valkyrie  #
+#############
+
+dn: uid=valkyrie,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: valkyrie
+sn: Asgardian
+givenName: Brunnhilde
+cn: Brunnhilde Asgardian
+mail:valkyrie@{{ openldap_domain_name }}
+displayName: Brunnhilde Asgardian
+uidNumber: 5177
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Brunnhilde Asgardian
+loginShell: /bin/bash
+homeDirectory: /home/valkyrie
+
+##############
+# thevision  #
+##############
+
+dn: uid=thevision,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: thevision
+sn: Shade
+givenName: Victor
+cn: Victor Shade
+mail:thevision@{{ openldap_domain_name }}
+displayName: Victor Shade
+uidNumber: 5178
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Victor Shade
+loginShell: /bin/bash
+homeDirectory: /home/thevision
+
+###############
+# warmachine  #
+###############
+
+dn: uid=warmachine,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: warmachine
+sn: Rhodes
+givenName: James
+cn: James Rhodes
+mail:warmachine@{{ openldap_domain_name }}
+displayName: James Rhodes
+uidNumber: 5179
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: James Rhodes
+loginShell: /bin/bash
+homeDirectory: /home/warmachine
+
+#############
+# wasp      #
+#############
+
+dn: uid=wasp,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: wasp
+sn: van Dyne
+givenName: Janet
+cn: Janet van Dyne
+mail:wasp@{{ openldap_domain_name }}
+displayName: Janet van Dyne
+uidNumber: 5180
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Janet van Dyne
+loginShell: /bin/bash
+homeDirectory: /home/wasp
+
+#############
+# wong      #
+#############
+
+dn: uid=wong,ou=People,{{ openldap_base_dn }}
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+uid: wong
+sn: Wong
+givenName: Benedict
+cn: Benedict Wong
+mail:wong@{{ openldap_domain_name }}
+displayName: Benedict Wong
+uidNumber: 5181
+gidNumber: 5000
+userPassword: {{ openldap_user_password }}
+gecos: Benedict Wong
+loginShell: /bin/bash
+homeDirectory: /home/wong
