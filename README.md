@@ -116,16 +116,39 @@ Git can save you from having to retype things you have mistyped!
 
 
 ## Git patch
-Allows you to stage portions of files
+Allows you to stage portions of files, known as `hunks`
+- A hunk is each section of a diff that shows some context on where the differences happen
 
 ### About
 `git add -p` (instead of `git add` once you've modified a file or files)
 - Cool if you need to push a feature but also have a bug
-- Has an edit mode to cherry-pick which hunks to stage or not
-- Has a split mode to break up hunks further
+- Option available:
+  - y - stage this hunk
+  - n - do not stage this hunk
+  - q - quit; do not stage this hunk nor any of the remaining ones
+  - a - stage this hunk and all later hunks in the file
+  - d - do not stage this hunk nor any of the later hunks in the file
+  - g - select a hunk to go to
+  - / - search for a hunk matching the given regex
+  - j - leave this hunk undecided, see next undecided hunk
+  - J - leave this hunk undecided, see next hunk
+  - k - leave this hunk undecided, see previous undecided hunk
+  - K - leave this hunk undecided, see previous hunk
+  - s - split the current hunk into smaller hunks
+  - e - manually edit the current hunk
+  - ? - print help
 
 ### Try it out
-- 
+- cd into the `git` repository we've been using if you aren't there
+- Make changes to the `users.ldif.j2` file across multiple lines and save it
+- `git add -p`
+- Choose an option (detailed above)
+- Play around and see what it does
+- Note that `e` and `s` for edit and split mode are both very granular
+  - Lines with**+** are new lines,- indicates deleted lines and lines with a space**’ '** are left untouched
+  - You can make hunks smaller in split mode
+  - You can delete the lines you don’t want to include and then modify the number of lines on the “to-file-range”
+  - Line numbers matter, and any additions or deletions warrant modifications
 
 ## Git config notes
 ### Git config levels
@@ -136,12 +159,17 @@ Allows you to stage portions of files
 - `--local`
   - Repository-level configurations; they only apply to the specific repository where they are set
 
-### Stuff you should definitely have
-View what you have by opening the `.gitconfig` or run
-`git config --list`
+### Stuff you should definitely have in your `.gitconfig`
+`.gitconfig` is the file that Git uses to operate and configure variables
 
-- `git config --global user.name "First Last"`
-- `git config --global user.email "you@email.com"`
-- `autocrlf` (auto carriage return line feed)
-  - For Windows users: `git config --global core.autocrlf true`
-  - For Unix: `git config --global core.autocrlf input`
+### About
+You can customize the way git looks and acts by customizing your `.gitconfig`
+
+### Try it out
+- View what you have by opening the `.gitconfig` or run `git config --list`
+- At minimum, you should definitely have
+  - `git config --global user.name "First Last"`
+  - `git config --global user.email "you@email.com"`
+  - `autocrlf` (auto carriage return line feed) // This option tells git to not track line changes in git, which can vary OS to OS
+    - For Windows users: `git config --global core.autocrlf true`
+    - For Unix: `git config --global core.autocrlf input`
