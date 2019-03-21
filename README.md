@@ -159,7 +159,7 @@ Allows you to stage portions of files, known as `hunks`
 - `--local`
   - Repository-level configurations; they only apply to the specific repository where they are set
 
-### Stuff you should definitely have in your `.gitconfig`
+## Stuff you should definitely have in your `.gitconfig`
 `.gitconfig` is the file that Git uses to operate and configure variables
 
 ### About
